@@ -41,7 +41,6 @@ Nook is your online book corner. Built to make finding books, storing notes and 
 4. ## How to run the app
    ```bash
    python manage.py runserver
-   flask run
    ```
 
 ## 🧑‍💻 Contributing
