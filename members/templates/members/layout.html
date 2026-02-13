@@ -17,17 +17,25 @@
   <body>
     <div id="header_container">
       <div class="main_header">
-        <h1>Nook</h1>
+        <h1 id="app_name">Nook</h1>
       </div>
       <div>
         <ul class="nav">
+          {% if user.is_authenticated %}
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'index' %}">landing</a>
+            <a class="nav-link" href="">Profile</a>
           </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'login' %}">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'register' %}">Register</a>
+          </li>
+          {% endif %}
         </ul>
       </div>
     </div>
-    <hr />
     {% block body %} {% endblock %}
   </body>
 </html>
